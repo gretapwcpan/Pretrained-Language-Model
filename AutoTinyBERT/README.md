@@ -64,68 +64,190 @@ class BertSelfOutput(nn.Module):
 
  
 
-## Train
-### Generate Data
-We first generate the training data with `generate_data.py` for pre-training or knowledge distillation.  
+## Quick Start Guide
 
-```
-python generate_data.py --train_corpus ${wiki_book_corpus} --bert_model ${bert_base}$ --output_dir ${train_data_dir} \
-      --do_lower_case --reduce_memory
+### Step 1: Setup Model Directory
+AutoTinyBERT requires a proper model directory with vocabulary and config files. Run the setup script:
 
-${wiki_book_corpus}$ means the raw data. Each line is a sentence, and the document is separated by a blank line.
-${bert_base}$ means the dir of bert-base, here we only use the vocab file.
-${output_dir}$ means the dir of generated data.
+```bash
+# Option 1: Run with bash
+bash setup_superbert_model.sh
+
+# Option 2: Make executable and run directly
+chmod +x setup_superbert_model.sh
+./setup_superbert_model.sh
+
+# This creates experiments/models/superbert_model/ with:
+# - config.json (with SuperBERT-specific qkv_size parameter)
+# - vocab.txt (BERT vocabulary)
 ```
 
-### Train SuperPLM
-Then we use `pre_training.py` to train a SuperPLM with the mlm-loss or kd-loss.
+### Step 2: Generate Training Data
+Generate preprocessed training data from a corpus. You can use various data sources:
+
+#### Option A: Download WikiText Dataset (Quick Start)
+```bash
+# Download WikiText-103 (a smaller Wikipedia dataset for testing)
+wget https://s3.amazonaws.com/research.metamind.io/wikitext/wikitext-103-raw-v1.zip
+unzip wikitext-103-raw-v1.zip
+cd wikitext-103-raw
+
+# Combine train and valid for more data
+cat wiki.train.raw wiki.valid.raw > ../corpus.txt
+cd ..
+
+# Generate training data
+python generate_data.py \
+    --train_corpus corpus.txt \
+    --output_dir experiments/data/pretrain_data \
+    --bert_model bert-base-uncased \
+    --do_lower_case \
+    --max_seq_len 128
 ```
-### For the mlm-loss setting:
-python -m torch.distributed.launch \
-    --nproc_per_node=$1 \
-    --nnodes=$2 \
-    --node_rank=$3 \
-    --master_addr=$4 \
-    --master_port=$5 \
-    pre_training.py \
-    --pregenerated_data ${train_data_dir} \
-    --cache_dir ${cache_dir} \
-    --epochs ${epochs} \
-    --gradient_accumulation_steps ${gradient_accumulation_steps} \
-    --train_batch_size ${train_batch_size} \
-    --learning_rate ${learning_rate} \
-    --max_seq_length ${max_seq_length} \
-    --student_model ${student_model} \
+
+#### Option B: Use Wikipedia Dump (Production Scale)
+```bash
+# Download Wikipedia dump (English)
+wget https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2
+
+# Extract and preprocess (requires wikiextractor)
+pip install wikiextractor
+python -m wikiextractor.WikiExtractor enwiki-latest-pages-articles.xml.bz2 \
+    --processes 8 --output wiki_extracted
+
+# Combine extracted files into corpus
+find wiki_extracted -name '*.txt' -exec cat {} \; > wiki_corpus.txt
+
+# Generate training data
+python generate_data.py \
+    --train_corpus wiki_corpus.txt \
+    --output_dir experiments/data/pretrain_data \
+    --bert_model bert-base-uncased \
+    --do_lower_case \
+    --max_seq_len 128 \
+    --reduce_memory  # Use for large datasets
+```
+
+#### Option C: Use BookCorpus or Custom Dataset
+```bash
+# If you have BookCorpus or other text data
+# Format: One sentence per line, blank lines between documents
+
+# Generate training data
+python generate_data.py \
+    --train_corpus path/to/your/corpus.txt \
+    --output_dir experiments/data/pretrain_data \
+    --bert_model bert-base-uncased \
+    --do_lower_case \
+    --max_seq_len 128
+```
+
+**Note**: The corpus should be formatted with one sentence per line, and documents separated by blank lines.
+
+### Step 3: Train SuperPLM
+
+#### Option A: MLM Pre-training (Self-supervised)
+```bash
+# Single GPU training
+python pre_training.py \
+    --pregenerated_data experiments/data/pretrain_data \
+    --student_model experiments/models/superbert_model \
+    --cache_dir experiments/output \
+    --epochs 3 \
+    --train_batch_size 8 \
+    --learning_rate 1e-4 \
+    --max_seq_length 128 \
     --masked_lm_prob 0.15 \
-    --do_lower_case --fp16 --scratch --mlm_loss
+    --do_lower_case \
+    --mlm_loss \
+    --scratch
 
-
-### For the kd-loss setting:
-python -m torch.distributed.launch \
-    --nproc_per_node=$1 \
-    --nnodes=$2 \
-    --node_rank=$3 \
-    --master_addr=$4 \
-    --master_port=$5 \
-    pre_training.py \
-    --pregenerated_data ${train_data_dir} \
-    --cache_dir ${cache_dir} \
-    --epochs ${epochs} \
-    --gradient_accumulation_steps ${gradient_accumulation_steps} \
-    --train_batch_size ${train_batch_size} \
-    --learning_rate ${learning_rate} \
-    --max_seq_length ${max_seq_length} \
-    --student_model ${student_model} \
-    --teacher_model ${teacher_model} \
-    --masked_lm_prob 0 \
-    --do_lower_case --fp16 --scratch 
-
-${train_data_dir}$ is the dir of dataset generated by generate_data.py
-${student_model}$ refers to the dir of SuperPLM
-${teacher_model}$ means the dir of teacher model, we use ELECTRA-base in our paper. 
-${cache_dir}$ means the output dir
-
+# Multi-GPU training with torchrun (recommended for PyTorch 1.9+)
+torchrun --nproc_per_node=8 pre_training.py \
+    --pregenerated_data experiments/data/pretrain_data \
+    --student_model experiments/models/superbert_model \
+    --cache_dir experiments/output \
+    --epochs 3 \
+    --train_batch_size 8 \
+    --learning_rate 1e-4 \
+    --max_seq_length 128 \
+    --masked_lm_prob 0.15 \
+    --do_lower_case \
+    --fp16 \
+    --mlm_loss \
+    --scratch
 ```
+
+#### Option B: Knowledge Distillation (Teacher-Student)
+```bash
+# Single GPU training
+python pre_training.py \
+    --pregenerated_data experiments/data/pretrain_data \
+    --student_model experiments/models/superbert_model \
+    --teacher_model bert-base-uncased \
+    --cache_dir experiments/output \
+    --epochs 3 \
+    --train_batch_size 8 \
+    --learning_rate 1e-4 \
+    --max_seq_length 128 \
+    --do_lower_case \
+    --scratch
+
+# Multi-GPU training with torchrun (recommended for PyTorch 1.9+)
+torchrun --nproc_per_node=8 pre_training.py \
+    --pregenerated_data experiments/data/pretrain_data \
+    --student_model experiments/models/superbert_model \
+    --teacher_model bert-base-uncased \
+    --cache_dir experiments/output \
+    --epochs 3 \
+    --train_batch_size 8 \
+    --learning_rate 1e-4 \
+    --max_seq_length 128 \
+    --do_lower_case \
+    --fp16 \
+    --scratch
+```
+
+### Common Issues and Solutions
+
+1. **Model Path Error**: If you get "vocab.txt not found" or "config.json not found":
+   - Run `bash setup_superbert_model.sh` to create proper model directory
+   - Or use HuggingFace model names directly: `--student_model bert-base-uncased`
+
+2. **Permission Denied on /cache**: The script now uses the `--cache_dir` argument properly. Use a writable directory:
+   ```bash
+   --cache_dir ./experiments/cache  # or ~/cache or /tmp/cache
+   ```
+
+3. **NumPy Deprecation Errors**: Fixed in the latest version
+   - `np.int` → `np.int32`
+   - `np.bool` → `bool`
+
+4. **Warmup Configuration**: Smart adaptive warmup
+   - Automatically switches to proportion-based warmup if steps exceed total training
+   - Shows warnings and actual warmup steps in logs
+   - **Best practices:**
+     - Large datasets: Use `--warmup_steps` (e.g., 10000)
+     - Small datasets: Use `--warmup_proportion` (e.g., 0.1 for 10%)
+     - Default: 10% warmup is recommended for most cases
+
+5. **Directory Creation Race Condition**: Fixed with proper synchronization
+   - Only rank 0 creates directories
+   - Other processes wait via `torch.distributed.barrier()`
+
+6. **CUDA/Distributed Training Issues**: 
+   - For single GPU, omit `--local_rank` or set it to 0
+   - The script now handles negative GPU index properly
+
+7. **Memory Issues**: Reduce `--train_batch_size` or use `--gradient_accumulation_steps`
+
+### Architecture Search Space
+AutoTinyBERT searches over these hyperparameters:
+- **Layers**: 1-8 transformer layers
+- **Hidden Size**: 128-768 dimensions
+- **QKV Size**: 180-768 dimensions (attention mechanism)
+- **FFN Size**: 128-3072 dimensions (feed-forward network)
+- **Attention Heads**: 1-12 heads
 
 
 ### Random|Fast|Evolved Search

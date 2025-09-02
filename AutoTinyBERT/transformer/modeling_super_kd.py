@@ -881,7 +881,13 @@ class SuperBertModel(BertPreTrainedModel):
         if token_type_ids is None:
             token_type_ids = torch.zeros_like(input_ids)
         extended_attention_mask = attention_mask.unsqueeze(1).unsqueeze(2)
-        extended_attention_mask = extended_attention_mask.to(dtype=next(self.parameters()).dtype)  # fp16 compatibility
+        # Fix StopIteration error: use default dtype if no parameters exist
+        try:
+            param_dtype = next(self.parameters()).dtype
+        except StopIteration:
+            # If model has no parameters yet, use float32 as default
+            param_dtype = torch.float32
+        extended_attention_mask = extended_attention_mask.to(dtype=param_dtype)  # fp16 compatibility
         extended_attention_mask = (1.0 - extended_attention_mask) * -10000.0
 
         head_number = self.head_number
@@ -1156,5 +1162,3 @@ class SuperBertForQuestionAnswering(BertPreTrainedModel):
             return total_loss
 
         return logits
-
-

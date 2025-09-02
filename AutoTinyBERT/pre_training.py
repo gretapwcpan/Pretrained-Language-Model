@@ -35,13 +35,6 @@ from tqdm import tqdm
 import pickle
 import collections
 
-# This is used for running on Huawei Cloud.
-oncloud = True
-try:
-    import moxing as mox
-except:
-    oncloud = False
-
 from transformer.file_utils import WEIGHTS_NAME, CONFIG_NAME
 from transformer.modeling_super_kd import SuperTinyBertForPreTraining, SuperBertForPreTraining, BertConfig
 from transformer.modeling_base import BertModel
@@ -56,7 +49,12 @@ except ImportError:
 
 import logging
 
-from apex.parallel import DistributedDataParallel as DDP
+from torch.nn.parallel import DistributedDataParallel as DDP
+# Use the new torch.amp API if available, otherwise fall back to torch.cuda.amp
+try:
+    from torch.amp import autocast, GradScaler
+except ImportError:
+    from torch.cuda.amp import autocast, GradScaler
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(name)s -   %(message)s',
                     datefmt='%m/%d/%Y %H:%M:%S',
@@ -112,13 +110,13 @@ def convert_example_to_features(example, args):
         print(tokens)
         print(masked_lm_labels)
 
-    input_array = np.zeros(args.max_seq_length, dtype=np.int)
+    input_array = np.zeros(args.max_seq_length, dtype=np.int32)
     input_array[:len(input_ids)] = input_ids
 
-    mask_array = np.zeros(args.max_seq_length, dtype=np.bool)
+    mask_array = np.zeros(args.max_seq_length, dtype=bool)
     mask_array[:len(input_ids)] = 1
 
-    lm_label_array = np.full(args.max_seq_length, dtype=np.int, fill_value=-1)
+    lm_label_array = np.full(args.max_seq_length, dtype=np.int32, fill_value=-1)
     lm_label_array[masked_lm_positions] = masked_label_ids
 
     features = InputFeatures(input_ids=input_array,
@@ -132,7 +130,7 @@ def convert_example_to_features(example, args):
 def mask_and_choose(batch, num_samples, args):
     seq_len = args.max_seq_length
     input_ids = np.zeros(shape=(num_samples, seq_len), dtype=np.int32)
-    input_masks = np.zeros(shape=(num_samples, seq_len), dtype=np.bool)
+    input_masks = np.zeros(shape=(num_samples, seq_len), dtype=bool)
     lm_label_ids = np.full(shape=(num_samples, seq_len), dtype=np.int32, fill_value=-1)
 
     for i, line in enumerate(batch):
@@ -254,20 +252,13 @@ def main():
                         action='store_true',
                         help="Whether to debug")
 
-    parser.add_argument("--local_rank",
+    parser.add_argument("--local_rank", "--local-rank",
                         type=int,
                         default=-1,
                         help="local_rank for distributed training on gpus")
     parser.add_argument("--no_cuda",
                         action='store_true',
                         help="Whether not to use CUDA when available")
-    parser.add_argument(
-        "--fp16_opt_level",
-        type=str,
-        default="O1",
-        help="For fp16: Apex AMP optimization level selected in ['O0', 'O1', 'O2', and 'O3']."
-             "See details at https://nvidia.github.io/apex/amp.html",
-    )
 
     parser.add_argument('--loss_scale',
                         type=float, default=0,
@@ -327,13 +318,22 @@ def main():
     init_method = ''
     master_ip = os.getenv('MASTER_ADDR', 'localhost')
     master_port = os.getenv('MASTER_PORT', '6000')
-    init_method += master_ip + ':' + master_port
+    init_method = f'tcp://{master_ip}:{master_port}'  # Must have tcp:// prefix
 
     # Manually set the device ids.
     # if device_count > 0:
     # args.local_rank = args.rank % device_count
-    torch.cuda.set_device(args.local_rank)
-    device = torch.device("cuda", args.local_rank)
+    
+    # Handle local_rank properly for both single and multi-GPU
+    if args.local_rank == -1:
+        # Single GPU mode - use first available GPU
+        device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+        args.local_rank = 0 if torch.cuda.is_available() else -1
+    else:
+        # Distributed mode - use specified GPU
+        torch.cuda.set_device(args.local_rank)
+        device = torch.device("cuda", args.local_rank)
+    
     print('device_id: %s' % args.local_rank)
     print('device_count: %s, rank: %s, world_size: %s' % (device_count, args.rank, args.world_size))
     print(init_method)
@@ -342,12 +342,6 @@ def main():
                                          rank=args.rank, init_method=init_method)
 
     LOCAL_DIR = args.cache_dir
-    if oncloud:
-        assert mox.file.exists(LOCAL_DIR)
-
-    if args.local_rank == 0 and oncloud:
-        logging.info(mox.file.list_directory(args.pregenerated_data, recursive=True))
-        logging.info(mox.file.list_directory(args.student_model, recursive=True))
 
     local_save_dir = os.path.join(LOCAL_DIR, 'output', 'superbert', 'checkpoints')
     local_tsbd_dir = os.path.join(LOCAL_DIR, 'output', 'superbert', 'tensorboard')
@@ -370,8 +364,11 @@ def main():
             os.makedirs(bash_tsbd_dir)
             logger.info(bash_tsbd_dir + ' created!')
 
-    local_data_dir_tmp = '/cache/data/tmp/'
-    local_data_dir = local_data_dir_tmp + save_name
+    # Use cache_dir from arguments instead of hardcoded /cache path
+    local_data_dir_tmp = os.path.join(LOCAL_DIR, 'data', 'tmp')
+    if not os.path.exists(local_data_dir_tmp):
+        os.makedirs(local_data_dir_tmp, exist_ok=True)
+    local_data_dir = os.path.join(local_data_dir_tmp, save_name)
 
     if args.gradient_accumulation_steps < 1:
         raise ValueError("Invalid gradient_accumulation_steps parameter: {}, should be >= 1".format(
@@ -454,20 +451,54 @@ def main():
             continue
 
         args.local_data_dir = os.path.join(local_data_dir, str(epoch))
+        # Only rank 0 creates the directory, others wait
         if args.local_rank == 0:
-            os.makedirs(args.local_data_dir)
-        while 1:
-            if os.path.exists(args.local_data_dir):
-                epoch_dataset = load_doc_tokens_ngrams(args)
-                break
+            os.makedirs(args.local_data_dir, exist_ok=True)
+        # Synchronize all processes before proceeding
+        if args.world_size > 1:
+            torch.distributed.barrier()
+        # Now all processes can safely proceed
+        epoch_dataset = load_doc_tokens_ngrams(args)
+        
+        # Configure sampler based on distributed training setup
+        # Best practice: Always use DistributedSampler with DDP
+        if args.world_size > 1:
+            # drop_last=False ensures all ranks get data, even if last batch is smaller
+            train_sampler = DistributedSampler(
+                epoch_dataset, 
+                num_replicas=args.world_size, 
+                rank=args.rank,
+                drop_last=False  # Keep last batch to ensure all ranks get data
+            )
+        else:
+            train_sampler = None
 
-        if args.local_rank == 0 and oncloud:
-            logging.info('Dataset in epoch %s', epoch)
-            logging.info(mox.file.list_directory(args.local_data_dir, recursive=True))
-
-        train_sampler = DistributedSampler(epoch_dataset, num_replicas=1, rank=0)
-
-        train_dataloader = DataLoader(epoch_dataset, sampler=train_sampler, batch_size=args.train_batch_size)
+        # Use drop_last=False to keep incomplete batches
+        # This is safer for DDP as all ranks will always get some data
+        train_dataloader = DataLoader(
+            epoch_dataset, 
+            sampler=train_sampler, 
+            batch_size=args.train_batch_size,
+            shuffle=(train_sampler is None),  # Shuffle only if no sampler
+            drop_last=False  # Keep last batch to ensure all ranks get data in DDP
+        )
+        
+        # Check if dataset might cause issues with multi-GPU training
+        total_batches = len(train_dataloader)
+        if args.world_size > 1 and total_batches == 0:
+            logger.error(
+                f"Dataset has {len(epoch_dataset)} samples which results in 0 batches "
+                f"with batch_size={args.train_batch_size}. Training cannot proceed."
+            )
+            raise ValueError("Dataset too small for current batch size configuration")
+        
+        # Optional: Warn if dataset size is not perfectly divisible
+        if len(epoch_dataset) % (args.world_size * args.train_batch_size) != 0:
+            logger.info(
+                f"Dataset size ({len(epoch_dataset)}) is not perfectly divisible by "
+                f"world_size × batch_size ({args.world_size} × {args.train_batch_size}). "
+                f"Last batch will be smaller, which is handled correctly with drop_last=False."
+            )
 
         step_in_each_epoch = len(train_dataloader) // args.gradient_accumulation_steps
         num_train_optimization_steps = step_in_each_epoch * args.epochs
@@ -489,35 +520,57 @@ def main():
                 {'params': [p for n, p in param_optimizer if any(nd in n for nd in no_decay)], 'weight_decay': 0.0}
             ]
 
-            warm_up_ratio = args.warmup_steps / num_train_optimization_steps
-            print('warm_up_ratio: {}'.format(warm_up_ratio))
+            # Smart warmup calculation that adapts to dataset size
+            if args.warmup_steps > 0:
+                # Check if warmup_steps makes sense for the dataset size
+                if args.warmup_steps > num_train_optimization_steps:
+                    # Warmup steps exceed total training steps - use proportion instead
+                    warm_up_ratio = args.warmup_proportion
+                    actual_warmup_steps = int(warm_up_ratio * num_train_optimization_steps)
+                    logger.warning(
+                        f"Warmup steps ({args.warmup_steps}) exceed total training steps ({num_train_optimization_steps}). "
+                        f"Switching to proportion-based warmup ({args.warmup_proportion:.1%} = {actual_warmup_steps} steps)"
+                    )
+                else:
+                    # Warmup steps are valid - use them
+                    warm_up_ratio = args.warmup_steps / num_train_optimization_steps
+                    actual_warmup_steps = args.warmup_steps
+            else:
+                # No warmup steps specified - use proportion
+                warm_up_ratio = args.warmup_proportion
+                actual_warmup_steps = int(warm_up_ratio * num_train_optimization_steps)
+            
+            # Ensure warmup ratio is valid
+            warm_up_ratio = max(0.0, min(1.0, warm_up_ratio))
+            
+            logger.info('Warmup configuration:')
+            logger.info(f'  - Warmup ratio: {warm_up_ratio:.4f} ({warm_up_ratio:.1%})')
+            logger.info(f'  - Actual warmup steps: {actual_warmup_steps} / {num_train_optimization_steps} total steps')
+            logger.info(f'  - Target learning rate: {args.learning_rate}')
+            
             optimizer = BertAdam(optimizer_grouped_parameters, lr=args.learning_rate,
                                  e=args.adam_epsilon, schedule='warmup_linear',
                                  t_total=num_train_optimization_steps,
                                  warmup=warm_up_ratio)
 
             if args.fp16:
-                try:
-                    from apex import amp
-                except ImportError:
-                    raise ImportError("Please install apex from https://www.github.com/nvidia/apex"
-                                      " to use fp16 training.")
-                student_model, optimizer = amp.initialize(student_model, optimizer,
-                                                          opt_level=args.fp16_opt_level,
-                                                          min_loss_scale=1) #
-
-            # apex
-            student_model = DDP(student_model, message_size=10000000,
-                                gradient_predivide_factor=torch.distributed.get_world_size(),
-                                delay_allreduce=True)
-
-            if not args.mlm_loss:
-                teacher_model = DDP(teacher_model, message_size=10000000,
-                                    gradient_predivide_factor=torch.distributed.get_world_size(),
-                                    delay_allreduce=True)
-                teacher_model.eval()
-
-            logger.info('apex data paralleled!')
+                # GradScaler for mixed precision training
+                scaler = GradScaler(init_scale=1.0)
+            else:
+                scaler = None
+            # Only use DDP when world_size > 1 (distributed training)
+            # For single GPU or when not using distributed training, no wrapper is needed
+            if args.world_size > 1:
+                student_model = DDP(student_model, 
+                                device_ids=[args.local_rank],
+                                output_device=args.local_rank,
+                                find_unused_parameters=True)
+                
+                if not args.mlm_loss:
+                    teacher_model = DDP(teacher_model,
+                                    device_ids=[args.local_rank],
+                                    output_device=args.local_rank)
+            # No DataParallel at all - DDP is the only way for multi-GPU
 
         from torch.nn import MSELoss
         loss_mse = MSELoss()
@@ -572,18 +625,22 @@ def main():
 
                 tr_loss += loss.item()
                 if args.fp16:
-                    with amp.scale_loss(loss, optimizer) as scaled_loss:
-                        scaled_loss.backward(retain_graph=True)
+                    scaler.scale(loss).backward()
                 else:
                     loss.backward(retain_graph=True)
 
             if (step + 1) % args.gradient_accumulation_steps == 0:
                 if args.fp16:
-                    torch.nn.utils.clip_grad_norm_(amp.master_params(optimizer), args.max_grad_norm)
+                    # Unscale gradients first, then clip
+                    scaler.unscale_(optimizer)
+                    torch.nn.utils.clip_grad_norm_(student_model.parameters(), args.max_grad_norm)
+                    # Step with scaler
+                    scaler.step(optimizer)
+                    scaler.update()
                 else:
                     torch.nn.utils.clip_grad_norm_(student_model.parameters(), args.max_grad_norm)
-
-                optimizer.step()
+                    optimizer.step()
+                
                 optimizer.zero_grad()
                 global_step += 1
 
@@ -643,13 +700,6 @@ def main():
 
             torch.save(optimizer.state_dict(), os.path.join(saving_path, "optimizer.pt"))
             logger.info("Saving optimizer and scheduler states to %s", saving_path)
-
-            # debug
-            if oncloud:
-                local_output_dir = os.path.join(LOCAL_DIR, 'output')
-                logger.info(mox.file.list_directory(local_output_dir, recursive=True))
-                logger.info('s3_output_dir: ' + args.s3_output_dir)
-                mox.file.copy_parallel(local_output_dir, args.s3_output_dir)
 
     if args.local_rank == 0:
         tb_writer.close()
