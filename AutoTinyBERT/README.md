@@ -83,26 +83,39 @@ chmod +x setup_superbert_model.sh
 ```
 
 ### Step 2: Generate Training Data
-Generate preprocessed training data from a corpus. You can use various data sources:
 
-#### Option A: Download WikiText Dataset (Quick Start)
+⚠️ **IMPORTANT**: The original `generate_data.py` has a bug. Use `generate_data_fixed.py` or the helper scripts below.
+
+#### Quick Start (Recommended)
 ```bash
-# Download WikiText-103 (a smaller Wikipedia dataset for testing)
+# Use the automated script to generate sufficient data
+./fix_hanging_training.sh
+# Choose option 2 for 4 GPU training data
+# Choose option 1 for single GPU command
+
+# Or use the data generation helper
+./generate_more_data.sh
+# Choose option 1 for quick test (1-2 GPUs)
+# Choose option 2 for WikiText-103 (4+ GPUs)
+```
+
+#### Manual Data Generation
+```bash
+# Download WikiText-103
 wget https://s3.amazonaws.com/research.metamind.io/wikitext/wikitext-103-raw-v1.zip
 unzip wikitext-103-raw-v1.zip
-cd wikitext-103-raw
 
 # Combine train and valid for more data
-cat wiki.train.raw wiki.valid.raw > ../corpus.txt
-cd ..
+cat wikitext-103-raw/wiki.train.raw wikitext-103-raw/wiki.valid.raw > corpus.txt
 
-# Generate training data
-python generate_data.py \
+# Generate training data with FIXED script
+python generate_data_fixed.py \
     --train_corpus corpus.txt \
     --output_dir experiments/data/pretrain_data \
     --bert_model bert-base-uncased \
     --do_lower_case \
-    --max_seq_len 128
+    --max_seq_len 128 \
+    --num_files 4
 ```
 
 #### Option B: Use Wikipedia Dump (Production Scale)
@@ -146,24 +159,41 @@ python generate_data.py \
 
 ### Step 3: Train SuperPLM
 
-#### Option A: MLM Pre-training (Self-supervised)
+⚠️ **CRITICAL**: Multi-GPU training requires sufficient data to avoid hanging:
+- **1 GPU**: Any data size works
+- **2 GPUs**: Minimum 500 examples
+- **4 GPUs**: Minimum 2000 examples
+- **8 GPUs**: Minimum 4000 examples
+
+#### Check Your Data First
 ```bash
-# Single GPU training
+# Count examples in your data
+for f in experiments/data/pretrain_data/*.json; do
+    echo "$f: $(wc -l < $f) examples"
+done
+```
+
+#### Option A: Single GPU Training (Always Works)
+```bash
 python pre_training.py \
     --pregenerated_data experiments/data/pretrain_data \
     --student_model experiments/models/superbert_model \
     --cache_dir experiments/output \
     --epochs 3 \
-    --train_batch_size 8 \
+    --train_batch_size 16 \
     --learning_rate 1e-4 \
     --max_seq_length 128 \
     --masked_lm_prob 0.15 \
+    --warmup_proportion 0.1 \
     --do_lower_case \
     --mlm_loss \
     --scratch
+```
 
-# Multi-GPU training with torchrun (recommended for PyTorch 1.9+)
-torchrun --nproc_per_node=8 pre_training.py \
+#### Option B: Multi-GPU Training (Requires Sufficient Data)
+```bash
+# For 2 GPUs (500+ examples)
+torchrun --nproc_per_node=2 pre_training.py \
     --pregenerated_data experiments/data/pretrain_data \
     --student_model experiments/models/superbert_model \
     --cache_dir experiments/output \
@@ -172,6 +202,23 @@ torchrun --nproc_per_node=8 pre_training.py \
     --learning_rate 1e-4 \
     --max_seq_length 128 \
     --masked_lm_prob 0.15 \
+    --warmup_proportion 0.1 \
+    --do_lower_case \
+    --fp16 \
+    --mlm_loss \
+    --scratch
+
+# For 4 GPUs (2000+ examples required!)
+torchrun --nproc_per_node=4 pre_training.py \
+    --pregenerated_data experiments/data/pretrain_data \
+    --student_model experiments/models/superbert_model \
+    --cache_dir experiments/output \
+    --epochs 3 \
+    --train_batch_size 8 \
+    --learning_rate 1e-4 \
+    --max_seq_length 128 \
+    --masked_lm_prob 0.15 \
+    --warmup_steps 100 \
     --do_lower_case \
     --fp16 \
     --mlm_loss \
@@ -210,36 +257,42 @@ torchrun --nproc_per_node=8 pre_training.py \
 
 ### Common Issues and Solutions
 
-1. **Model Path Error**: If you get "vocab.txt not found" or "config.json not found":
+1. **Training Hangs with Multi-GPU** ⚠️ **MOST COMMON ISSUE**:
+   - **Cause**: Insufficient data for the number of GPUs
+   - **Solution**: Use `./fix_hanging_training.sh` to diagnose and fix
+   - **Quick Fix**: Use single GPU or generate more data
+
+2. **Data Generation Bug** (original `generate_data.py`):
+   - **Issue**: Hardcoded `/cache/shelf.db` path causes permission errors
+   - **Solution**: Use `generate_data_fixed.py` instead
+
+3. **Empty Data Files**:
+   - **Issue**: Default 28 files spread data too thin
+   - **Solution**: Use `--num_files 4` parameter in fixed script
+
+4. **Model Path Error**: 
    - Run `bash setup_superbert_model.sh` to create proper model directory
    - Or use HuggingFace model names directly: `--student_model bert-base-uncased`
 
-2. **Permission Denied on /cache**: The script now uses the `--cache_dir` argument properly. Use a writable directory:
-   ```bash
-   --cache_dir ./experiments/cache  # or ~/cache or /tmp/cache
-   ```
-
-3. **NumPy Deprecation Errors**: Fixed in the latest version
-   - `np.int` → `np.int32`
-   - `np.bool` → `bool`
-
-4. **Warmup Configuration**: Smart adaptive warmup
+5. **Warmup Configuration**: 
    - Automatically switches to proportion-based warmup if steps exceed total training
-   - Shows warnings and actual warmup steps in logs
-   - **Best practices:**
-     - Large datasets: Use `--warmup_steps` (e.g., 10000)
-     - Small datasets: Use `--warmup_proportion` (e.g., 0.1 for 10%)
-     - Default: 10% warmup is recommended for most cases
+   - Use `--warmup_proportion 0.1` for small datasets
+   - Use `--warmup_steps 1000` for large datasets
 
-5. **Directory Creation Race Condition**: Fixed with proper synchronization
-   - Only rank 0 creates directories
-   - Other processes wait via `torch.distributed.barrier()`
+6. **Deprecated Commands**:
+   - Don't use: `python -m torch.distributed.launch`
+   - Use instead: `torchrun --nproc_per_node=N`
 
-6. **CUDA/Distributed Training Issues**: 
-   - For single GPU, omit `--local_rank` or set it to 0
-   - The script now handles negative GPU index properly
+### Troubleshooting Scripts
 
-7. **Memory Issues**: Reduce `--train_batch_size` or use `--gradient_accumulation_steps`
+We provide several helper scripts to fix common issues:
+
+- **`fix_hanging_training.sh`** - Diagnose and fix hanging issues
+- **`generate_data_fixed.py`** - Fixed data generation without bugs
+- **`generate_more_data.sh`** - Easy corpus generation
+- **`reuse_tinybert_data.sh`** - Convert TinyBERT data
+- **`FIXES_AND_SOLUTIONS.md`** - Detailed troubleshooting guide
+- **`multi_gpu_guide.md`** - GPU scaling recommendations
 
 ### Architecture Search Space
 AutoTinyBERT searches over these hyperparameters:

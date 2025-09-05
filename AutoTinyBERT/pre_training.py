@@ -26,6 +26,7 @@ import random
 import numpy as np
 from collections import namedtuple
 import time
+import datetime
 import torch
 
 from torch.utils.data import DataLoader, TensorDataset
@@ -180,12 +181,20 @@ def load_doc_tokens_ngrams(args):
             data_files.append(inputfile)
 
     file_count = len(data_files)
-
+    
+    # Always use the original data splitting logic
+    # The DistributedSampler will handle its own splitting on top of this
     run_task(data_files, args)
 
-    t_input_ids, t_input_masks, t_lm_label_ids, t_ngram_ids, t_ngram_masks, t_ngram_starts, t_ngram_ends = [], [], [], [], [], [], []
+    t_input_ids, t_input_masks, t_lm_label_ids = [], [], []
     for i in range(file_count):
+        # Each rank reads its own cached file
         data_file_cached = os.path.join(args.local_data_dir, data_files[i] + '.cached.' + str(args.rank))
+        
+        if not os.path.exists(data_file_cached):
+            logger.error(f"Cached file not found: {data_file_cached}")
+            raise FileNotFoundError(f"Cached file not found: {data_file_cached}")
+            
         with open(data_file_cached, "rb") as handle:
             input_ids, input_masks, lm_label_ids = pickle.load(handle)
 
@@ -199,17 +208,19 @@ def load_doc_tokens_ngrams(args):
             t_input_masks.append(input_masks)
             t_lm_label_ids.append(lm_label_ids)
         logger.info("Dataset %s loaded", data_file_cached)
+    
     t_input_ids = torch.cat(t_input_ids, 0)
     t_input_masks = torch.cat(t_input_masks, 0)
     t_lm_label_ids = torch.cat(t_lm_label_ids, 0)
     logging.info("total num_samples %s", len(t_input_ids))
-    for i in range(1):
+    
+    if len(t_input_ids) > 0:
         logging.info("*** Example ***")
-        logging.info("block %s" % i)
-        tokens = args.tokenizer.convert_ids_to_tokens(t_input_ids[i].tolist())
+        logging.info("block 0")
+        tokens = args.tokenizer.convert_ids_to_tokens(t_input_ids[0].tolist())
         logging.info("inputs: %s" % ' '.join([str(item) for item in tokens]))
-        logging.info("input_masks: %s" % ' '.join([str(item) for item in t_input_masks[i].tolist()]))
-        logging.info("lm_label_ids: %s" % ' '.join([str(item) for item in t_lm_label_ids[i].tolist()]))
+        logging.info("input_masks: %s" % ' '.join([str(item) for item in t_input_masks[0].tolist()]))
+        logging.info("lm_label_ids: %s" % ' '.join([str(item) for item in t_lm_label_ids[0].tolist()]))
 
     dataset = TensorDataset(t_input_ids, t_input_masks, t_lm_label_ids)
 
@@ -307,6 +318,9 @@ def main():
     parser.add_argument("--train_url", type=str, default="", help="s3 url")
 
     args = parser.parse_args()
+    env_local_rank = os.getenv("LOCAL_RANK")
+    if env_local_rank is not None:
+        args.local_rank = int(env_local_rank)
 
     assert (torch.cuda.is_available())
     device_count = torch.cuda.device_count()
@@ -338,8 +352,24 @@ def main():
     print('device_count: %s, rank: %s, world_size: %s' % (device_count, args.rank, args.world_size))
     print(init_method)
 
-    torch.distributed.init_process_group(backend='nccl', world_size=args.world_size,
-                                         rank=args.rank, init_method=init_method)
+    # Only initialize distributed training when actually needed (world_size > 1)
+    if args.world_size > 1:
+        logger.info(f"Initializing distributed training with world_size={args.world_size}, rank={args.rank}")
+        logger.info(f"Init method: {init_method}")
+        try:
+            torch.distributed.init_process_group(
+                backend='nccl', 
+                world_size=args.world_size,
+                rank=args.rank, 
+                init_method=init_method,
+                timeout=datetime.timedelta(seconds=1800)  # 30 minute timeout
+            )
+            logger.info("Distributed training initialized successfully")
+        except Exception as e:
+            logger.error(f"Failed to initialize distributed training: {e}")
+            raise
+    else:
+        logger.info("Single GPU mode - skipping distributed initialization")
 
     LOCAL_DIR = args.cache_dir
 
@@ -452,13 +482,19 @@ def main():
 
         args.local_data_dir = os.path.join(local_data_dir, str(epoch))
         # Only rank 0 creates the directory, others wait
-        if args.local_rank == 0:
-            os.makedirs(args.local_data_dir, exist_ok=True)
-        # Synchronize all processes before proceeding
         if args.world_size > 1:
+            if args.rank == 0:
+                os.makedirs(args.local_data_dir, exist_ok=True)
+            # Synchronize all processes before proceeding
             torch.distributed.barrier()
+        else:
+            # Single GPU mode
+            os.makedirs(args.local_data_dir, exist_ok=True)
+        
         # Now all processes can safely proceed
+        logger.info(f"Rank {args.rank}: Loading dataset for epoch {epoch}")
         epoch_dataset = load_doc_tokens_ngrams(args)
+        logger.info(f"Rank {args.rank}: Dataset loaded with {len(epoch_dataset)} samples")
         
         # Configure sampler based on distributed training setup
         # Best practice: Always use DistributedSampler with DDP
@@ -472,7 +508,8 @@ def main():
             )
         else:
             train_sampler = None
-
+        if isinstance(train_sampler, DistributedSampler):
+            train_sampler.set_epoch(epoch)
         # Use drop_last=False to keep incomplete batches
         # This is safer for DDP as all ranks will always get some data
         train_dataloader = DataLoader(
@@ -566,11 +603,16 @@ def main():
                                 output_device=args.local_rank,
                                 find_unused_parameters=True)
                 
-                if not args.mlm_loss:
-                    teacher_model = DDP(teacher_model,
-                                    device_ids=[args.local_rank],
-                                    output_device=args.local_rank)
+                # Teacher model doesn't need DDP wrapper since it's not being trained
+                # and wrapping it can cause synchronization issues
             # No DataParallel at all - DDP is the only way for multi-GPU
+            
+            # Set teacher model to eval mode if using distillation
+            if not args.mlm_loss:
+                teacher_model.eval()
+                # Disable gradients for teacher model to save memory
+                for param in teacher_model.parameters():
+                    param.requires_grad = False
 
         from torch.nn import MSELoss
         loss_mse = MSELoss()
@@ -582,12 +624,12 @@ def main():
             input_ids, input_masks, lm_label_ids = batch
 
             if not args.mlm_loss:
-                teacher_last_rep, teacher_last_att = teacher_model(input_ids, input_masks)
-                teacher_last_att = torch.where(teacher_last_att <= -1e2,
-                                               torch.zeros_like(teacher_last_att).to(device),
-                                               teacher_last_att)
-                teacher_last_rep.detach()
-                teacher_last_att.detach()
+                # Teacher model inference without gradients
+                with torch.no_grad():
+                    teacher_last_rep, teacher_last_att = teacher_model(input_ids, input_masks)
+                    teacher_last_att = torch.where(teacher_last_att <= -1e2,
+                                                   torch.zeros_like(teacher_last_att).to(device),
+                                                   teacher_last_att)
 
             for sample_idx in range(args.sample_times_per_batch):
                 att_loss = 0.

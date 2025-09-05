@@ -1,0 +1,670 @@
+_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_17.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_17.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   16/28 processed in thread 0, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   18/28 processed in thread 2, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_16.json
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_18.json
+Training examples: 0it [00:00, ?it/s]
+Training examples: 0it [00:00, ?it/s]
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   18/28 processed in thread 3, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   18/28 processed in thread 1, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_18.json
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_16.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_18.json
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_18.json.cached.2
+Training examples: 0it [00:00, ?it/s]
+Training examples: 0it [00:00, ?it/s]
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_18.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_18.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   17/28 processed in thread 0, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   19/28 processed in thread 2, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_17.json
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_19.json
+Training examples: 0it [00:00, ?it/s]
+Training examples: 0it [00:00, ?it/s]
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   19/28 processed in thread 3, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   19/28 processed in thread 1, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_17.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_19.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_19.json
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_19.json
+Training examples: 0it [00:00, ?it/s]
+Training examples: 0it [00:00, ?it/s]
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_19.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_19.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   18/28 processed in thread 0, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   20/28 processed in thread 2, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_18.json
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_20.json
+Training examples: 0it [00:00, ?it/s]
+Training examples: 0it [00:00, ?it/s]
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   20/28 processed in thread 3, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   20/28 processed in thread 1, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_18.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_20.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_20.json
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_20.json
+Training examples: 0it [00:00, ?it/s]
+
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_20.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_20.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   19/28 processed in thread 0, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   21/28 processed in thread 2, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_19.json
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_21.json
+Training examples: 0it [00:00, ?it/s]
+
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   21/28 processed in thread 3, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_21.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_19.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   21/28 processed in thread 1, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_21.json
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_21.json
+Training examples: 0it [00:00, ?it/s]
+Training examples: 0it [00:00, ?it/s]
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_21.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_21.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   22/28 processed in thread 2, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   20/28 processed in thread 0, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_22.json
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_20.json
+Training examples: 0it [00:00, ?it/s]
+Training examples: 0it [00:00, ?it/s]
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   22/28 processed in thread 3, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_22.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   22/28 processed in thread 1, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_20.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_22.json
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_22.json
+Training examples: 0it [00:00, ?it/s]
+Training examples: 0it [00:00, ?it/s]
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_22.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_22.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   23/28 processed in thread 2, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   21/28 processed in thread 0, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_23.json
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_21.json
+Training examples: 0it [00:00, ?it/s]
+Training examples: 0it [00:00, ?it/s]
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_23.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_21.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   23/28 processed in thread 3, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   23/28 processed in thread 1, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_23.json
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_23.json
+Training examples: 0it [00:00, ?it/s]
+Training examples: 0it [00:00, ?it/s]
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   24/28 processed in thread 2, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_23.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_23.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   22/28 processed in thread 0, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_24.json
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_22.json
+Training examples: 0it [00:00, ?it/s]
+Training examples: 0it [00:00, ?it/s]
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_24.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_22.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   24/28 processed in thread 3, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   24/28 processed in thread 1, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_24.json
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_24.json
+Training examples: 0it [00:00, ?it/s]
+Training examples: 0it [00:00, ?it/s]
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_24.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   23/28 processed in thread 0, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_24.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_23.json
+09/03/2025 13:30:44 - INFO - root -   25/28 processed in thread 2, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_25.json
+Training examples: 0it [00:00, ?it/s]
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+Training examples: 0it [00:00, ?it/s]
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_23.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_25.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   25/28 processed in thread 3, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   25/28 processed in thread 1, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_25.json
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_25.json
+Training examples: 0it [00:00, ?it/s]
+09/03/2025 13:30:44 - INFO - root -   24/28 processed in thread 0, time cost is 0.02 secs
+Training examples: 0it [00:00, ?it/s]
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_24.json
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   26/28 processed in thread 2, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_25.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_26.json
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_25.json.cached.1
+Training examples: 0it [00:00, ?it/s]
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+Training examples: 0it [00:00, ?it/s]09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_24.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_26.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   26/28 processed in thread 3, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   26/28 processed in thread 1, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_26.json
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_26.json
+Training examples: 0it [00:00, ?it/s]
+Training examples: 0it [00:00, ?it/s]
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   27/28 processed in thread 2, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_27.json
+09/03/2025 13:30:44 - INFO - root -   25/28 processed in thread 0, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_26.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_26.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_25.json
+Training examples: 0it [00:00, ?it/s]
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+Training examples: 0it [00:00, ?it/s]
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_27.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_25.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   27/28 processed in thread 3, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   27/28 processed in thread 1, time cost is 0.02 secs
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_27.json
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_27.json
+Training examples: 0it [00:00, ?it/s]
+Training examples: 0it [00:00, ?it/s]
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   28/28 processed in thread 2, time cost is 0.03 secs
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   26/28 processed in thread 0, time cost is 0.03 secs
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_27.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_27.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_26.json
+Training examples: 0it [00:00, ?it/s]
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_26.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   28/28 processed in thread 3, time cost is 0.03 secs
+09/03/2025 13:30:44 - INFO - root -   28/28 processed in thread 1, time cost is 0.03 secs
+09/03/2025 13:30:44 - INFO - root -   27/28 processed in thread 0, time cost is 0.03 secs
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from file experiments/data/pretrain_data/train_doc_tokens_ngrams_27.json
+Training examples: 0it [00:00, ?it/s]
+09/03/2025 13:30:44 - INFO - root -   num_samples before cut 0
+09/03/2025 13:30:44 - INFO - root -   num_samples after cut 0
+09/03/2025 13:30:44 - INFO - root -   cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_27.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   28/28 processed in thread 0, time cost is 0.03 secs
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_0.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   num_samples 18
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_0.json.cached.2 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_1.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_0.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_0.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - root -   num_samples 18
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_1.json.cached.2 loaded
+09/03/2025 13:30:44 - INFO - root -   num_samples 18
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_0.json.cached.1 loaded
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_0.json.cached.3 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_2.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_1.json.cached.1
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_2.json.cached.2 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_1.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_1.json.cached.1 loaded
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_1.json.cached.3 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_3.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_2.json.cached.1
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_3.json.cached.2 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_2.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_2.json.cached.1 loaded
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_2.json.cached.3 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_0.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   num_samples 18
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_0.json.cached.0 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_4.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_4.json.cached.2 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_3.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_3.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_3.json.cached.1 loaded
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_3.json.cached.3 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_1.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_1.json.cached.0 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_5.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_5.json.cached.2 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_4.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_4.json.cached.3
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_4.json.cached.1 loaded
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_4.json.cached.3 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_2.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_2.json.cached.0 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_6.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_6.json.cached.2 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_5.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_5.json.cached.3
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_5.json.cached.1 loaded
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_5.json.cached.3 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_3.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_3.json.cached.0 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_7.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_7.json.cached.2 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_6.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_6.json.cached.3
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_6.json.cached.1 loaded
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_6.json.cached.3 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_4.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_4.json.cached.0 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_8.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_8.json.cached.2 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_7.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_7.json.cached.3
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_7.json.cached.1 loaded
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_7.json.cached.3 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_5.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_5.json.cached.0 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_9.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_9.json.cached.2 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_8.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_8.json.cached.3
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_8.json.cached.1 loaded
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_8.json.cached.3 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_6.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_6.json.cached.0 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_10.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_10.json.cached.2 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_9.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_9.json.cached.3
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_9.json.cached.1 loaded
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_9.json.cached.3 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_7.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_7.json.cached.0 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_11.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_11.json.cached.2 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_10.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_10.json.cached.1 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_10.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_10.json.cached.3 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_8.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_8.json.cached.0 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_12.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_12.json.cached.2 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_11.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_11.json.cached.1 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_11.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_11.json.cached.3 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_9.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_9.json.cached.0 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_13.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_13.json.cached.2 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_12.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_12.json.cached.1 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_12.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_12.json.cached.3 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_10.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_10.json.cached.0 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_14.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_13.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_14.json.cached.2 loaded
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_13.json.cached.1 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_13.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_13.json.cached.3 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_11.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_11.json.cached.0 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_15.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_15.json.cached.2 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_14.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_12.json.cached.0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_14.json.cached.1 loaded
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_14.json.cached.3
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_12.json.cached.0 loaded
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_14.json.cached.3 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_16.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_16.json.cached.2 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_15.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_13.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_15.json.cached.1 loaded
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_15.json.cached.3
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_13.json.cached.0 loaded
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_15.json.cached.3 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_17.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_17.json.cached.2 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_16.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_16.json.cached.1 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_16.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_16.json.cached.3 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_14.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_18.json.cached.2
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_14.json.cached.0 loaded
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_18.json.cached.2 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_17.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_17.json.cached.1 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_17.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_17.json.cached.3 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_15.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_19.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_15.json.cached.0 loaded
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_19.json.cached.2 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_18.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_18.json.cached.1 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_18.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_18.json.cached.3 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_16.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_20.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_16.json.cached.0 loaded
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_20.json.cached.2 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_19.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_19.json.cached.1 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_19.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_19.json.cached.3 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_17.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_21.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_17.json.cached.0 loaded
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_21.json.cached.2 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_20.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_20.json.cached.1 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_20.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_20.json.cached.3 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_18.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_22.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_18.json.cached.0 loaded
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_22.json.cached.2 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_21.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_21.json.cached.1 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_21.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_21.json.cached.3 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_23.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_19.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_23.json.cached.2 loaded
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_19.json.cached.0 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_22.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_22.json.cached.1 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_22.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_24.json.cached.2
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_22.json.cached.3 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_20.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_24.json.cached.2 loaded
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_20.json.cached.0 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_23.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_23.json.cached.1 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_23.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_25.json.cached.2
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_23.json.cached.3 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_21.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_25.json.cached.2 loaded
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_21.json.cached.0 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_24.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_24.json.cached.1 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_24.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_26.json.cached.2
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_24.json.cached.3 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_22.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_26.json.cached.2 loaded
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_22.json.cached.0 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_25.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_25.json.cached.1 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_25.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_27.json.cached.2
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_25.json.cached.3 loaded
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_23.json.cached.0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_27.json.cached.2 loaded
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_23.json.cached.0 loaded
+09/03/2025 13:30:44 - INFO - root -   total num_samples 18
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_26.json.cached.1
+09/03/2025 13:30:44 - INFO - root -   *** Example ***
+09/03/2025 13:30:44 - INFO - root -   block 0
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_26.json.cached.1 loaded
+09/03/2025 13:30:44 - INFO - root -   inputs: the scaling [MASK] describe how model performance improves [MASK] size and data . larger models [MASK] [MASK] better [MASK] but require more resources . efficient architecture ##s aim to achieve good performance with fewer parameters . [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_26.json.cached.3
+09/03/2025 13:30:44 - INFO - root -   input_masks: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_26.json.cached.3 loaded
+09/03/2025 13:30:44 - INFO - root -   lm_label_ids: -1 -1 4277 -1 -1 -1 -1 -1 2007 -1 -1 -1 -1 -1 -1 3227 6162 -1 2836 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_24.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Rank 2: Dataset loaded with 18 samples
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_24.json.cached.0 loaded
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_27.json.cached.1
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset size (18) is not perfectly divisible by world_size × batch_size (4 × 8). Last batch will be smaller, which is handled correctly with drop_last=False.
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - root -   ***** Running training *****
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_27.json.cached.1 loaded
+09/03/2025 13:30:44 - INFO - root -     Num examples = 72
+09/03/2025 13:30:44 - INFO - __main__ -     Num Epochs = 3
+09/03/2025 13:30:44 - INFO - root -     Total train batch size (w. parallel, distributed & accumulation) = 32
+09/03/2025 13:30:44 - INFO - __main__ -     Gradient Accumulation steps = 1
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_27.json.cached.3
+09/03/2025 13:30:44 - INFO - root -     Num steps = 3
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_27.json.cached.3 loaded
+09/03/2025 13:30:44 - INFO - root -   total num_samples 18
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_25.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   *** Example ***
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - root -   block 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_25.json.cached.0 loaded
+09/03/2025 13:30:44 - INFO - root -   inputs: beam search [MASK] a he ##uri ##stic search [MASK] used in sequence generation tasks . [MASK] [MASK] ##ding [MASK] the most probable token at each step . top - k sampling restrict ##s sampling to the k most likely token ##s . [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]
+09/03/2025 13:30:44 - INFO - root -   total num_samples 18
+09/03/2025 13:30:44 - INFO - root -   *** Example ***
+09/03/2025 13:30:44 - INFO - root -   input_masks: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+09/03/2025 13:30:44 - INFO - root -   block 0
+09/03/2025 13:30:44 - INFO - root -   lm_label_ids: -1 -1 2003 -1 -1 -1 -1 -1 9896 2109 -1 -1 -1 -1 -1 20505 21933 -1 27034 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+09/03/2025 13:30:44 - INFO - __main__ -   Rank 1: Dataset loaded with 18 samples
+09/03/2025 13:30:44 - INFO - root -   inputs: the em [MASK] ##ding dimension affects model capacity [MASK] computational cost . higher - dimensional [MASK] [MASK] ##ding [MASK] can capture more information . dimensional ##ity reduction techniques can com ##press em ##bed ##ding ##s while preserving information . [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]
+09/03/2025 13:30:44 - INFO - root -   input_masks: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+09/03/2025 13:30:44 - INFO - root -   lm_label_ids: -1 -1 8270 -1 -1 -1 -1 -1 1998 15078 -1 -1 -1 -1 -1 7861 8270 -1 2015 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+09/03/2025 13:30:44 - INFO - __main__ -   Rank 3: Dataset loaded with 18 samples
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_26.json.cached.0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset size (18) is not perfectly divisible by world_size × batch_size (4 × 8). Last batch will be smaller, which is handled correctly with drop_last=False.
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - root -   ***** Running training *****
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_26.json.cached.0 loaded
+09/03/2025 13:30:44 - INFO - root -     Num examples = 72
+09/03/2025 13:30:44 - INFO - __main__ -     Num Epochs = 3
+09/03/2025 13:30:44 - INFO - root -     Total train batch size (w. parallel, distributed & accumulation) = 32
+09/03/2025 13:30:44 - INFO - __main__ -     Gradient Accumulation steps = 1
+09/03/2025 13:30:44 - INFO - root -     Num steps = 3
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset size (18) is not perfectly divisible by world_size × batch_size (4 × 8). Last batch will be smaller, which is handled correctly with drop_last=False.
+09/03/2025 13:30:44 - INFO - root -   ***** Running training *****
+09/03/2025 13:30:44 - WARNING - __main__ -   Warmup steps (10000) exceed total training steps (3). Switching to proportion-based warmup (10.0% = 0 steps)
+09/03/2025 13:30:44 - INFO - root -     Num examples = 72
+09/03/2025 13:30:44 - INFO - __main__ -   Warmup configuration:
+09/03/2025 13:30:44 - INFO - __main__ -     Num Epochs = 3
+09/03/2025 13:30:44 - INFO - __main__ -     - Warmup ratio: 0.1000 (10.0%)
+09/03/2025 13:30:44 - INFO - root -     Total train batch size (w. parallel, distributed & accumulation) = 32
+09/03/2025 13:30:44 - INFO - __main__ -     - Actual warmup steps: 0 / 3 total steps
+09/03/2025 13:30:44 - INFO - __main__ -     Gradient Accumulation steps = 1
+09/03/2025 13:30:44 - INFO - __main__ -     - Target learning rate: 0.0001
+09/03/2025 13:30:44 - INFO - root -     Num steps = 3
+09/03/2025 13:30:44 - INFO - root -   Loading inputs from cached file experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_27.json.cached.0
+09/03/2025 13:30:44 - INFO - root -   num_samples 0
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset experiments/output/data/tmp/superbert_epoch_3_lr_0.0001_bsz_8_grad_accu_1_128_gpu_4/0/train_doc_tokens_ngrams_27.json.cached.0 loaded
+09/03/2025 13:30:44 - INFO - root -   total num_samples 18
+09/03/2025 13:30:44 - INFO - root -   *** Example ***
+09/03/2025 13:30:44 - INFO - root -   block 0
+09/03/2025 13:30:44 - INFO - root -   inputs: machine learning [MASK] a subset of artificial intelligence [MASK] focuses on building systems that learn [MASK] [MASK] . [MASK] networks are computational models inspired by biological neural networks in animal brains . deep learning is a class of machine learning algorithms [MASK] uses multiple layers to progressively extract [MASK] - level features from raw input . [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD] [PAD]
+09/03/2025 13:30:44 - INFO - root -   input_masks: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+09/03/2025 13:30:44 - INFO - root -   lm_label_ids: -1 -1 2003 -1 -1 -1 -1 -1 2008 7679 -1 -1 -1 -1 -1 2013 2951 -1 15756 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 2008 -1 -1 -1 -1 -1 -1 3020 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+09/03/2025 13:30:44 - WARNING - __main__ -   Warmup steps (10000) exceed total training steps (3). Switching to proportion-based warmup (10.0% = 0 steps)
+09/03/2025 13:30:44 - INFO - __main__ -   Rank 0: Dataset loaded with 18 samples
+09/03/2025 13:30:44 - INFO - __main__ -   Warmup configuration:
+09/03/2025 13:30:44 - INFO - __main__ -     - Warmup ratio: 0.1000 (10.0%)
+09/03/2025 13:30:44 - INFO - __main__ -     - Actual warmup steps: 0 / 3 total steps
+09/03/2025 13:30:44 - INFO - __main__ -     - Target learning rate: 0.0001
+09/03/2025 13:30:44 - WARNING - __main__ -   Warmup steps (10000) exceed total training steps (3). Switching to proportion-based warmup (10.0% = 0 steps)
+09/03/2025 13:30:44 - INFO - __main__ -   Warmup configuration:
+09/03/2025 13:30:44 - INFO - __main__ -     - Warmup ratio: 0.1000 (10.0%)
+09/03/2025 13:30:44 - INFO - __main__ -   Dataset size (18) is not perfectly divisible by world_size × batch_size (4 × 8). Last batch will be smaller, which is handled correctly with drop_last=False.
+09/03/2025 13:30:44 - INFO - __main__ -     - Actual warmup steps: 0 / 3 total steps
+09/03/2025 13:30:44 - INFO - root -   ***** Running training *****
+09/03/2025 13:30:44 - INFO - __main__ -     - Target learning rate: 0.0001
+09/03/2025 13:30:44 - INFO - root -     Num examples = 72
+09/03/2025 13:30:44 - INFO - __main__ -     Num Epochs = 3
+09/03/2025 13:30:44 - INFO - root -     Total train batch size (w. parallel, distributed & accumulation) = 32
+09/03/2025 13:30:44 - INFO - __main__ -     Gradient Accumulation steps = 1
+09/03/2025 13:30:44 - INFO - root -     Num steps = 3
+09/03/2025 13:30:44 - WARNING - __main__ -   Warmup steps (10000) exceed total training steps (3). Switching to proportion-based warmup (10.0% = 0 steps)
+09/03/2025 13:30:44 - INFO - __main__ -   Warmup configuration:
+09/03/2025 13:30:44 - INFO - __main__ -     - Warmup ratio: 0.1000 (10.0%)
+09/03/2025 13:30:44 - INFO - __main__ -     - Actual warmup steps: 0 / 3 total steps
+09/03/2025 13:30:44 - INFO - __main__ -     - Target learning rate: 0.0001
